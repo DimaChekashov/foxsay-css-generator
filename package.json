@@ -1,0 +1,16 @@
+{
+  "name": "foxsay-css-generator",
+  "version": "1.0.0",
+  "description": "Live CSS Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "css"
+  ],
+  "author": "DmitryChekashov <foxdima99@gmail.com>",
+  "license": "ISC"
+}
