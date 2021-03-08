@@ -2,6 +2,29 @@ import React, { Component } from "react";
 import "./BorderRadius.css";
 
 export default class BorderRadius extends Component {
+    inputs = [
+        {
+            label: "top-left",
+            name: "borderTopLeftRadius",
+        },
+        {
+            label: "top-right",
+            name: "borderTopRightRadius",
+        },
+        {
+            label: "bottom-left",
+            name: "borderBottomLeftRadius",
+        },
+        {
+            label: "bottom-right",
+            name: "borderBottomRightRadius",
+        },
+        {
+            label: "width",
+            name: "borderWidth",
+        },
+    ];
+
     constructor() {
         super();
 
@@ -14,13 +37,25 @@ export default class BorderRadius extends Component {
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
     }
 
     handleInputChange(name, val) {
         if (!Number.isInteger(+val)) return;
         this.setState({
-            [name]: val || 0,
+            [name]: +val || 0,
         });
+    }
+    handleKeyDown(name, key) {
+        if (key === "ArrowUp") {
+            this.setState({
+                [name]: this.state[name] + 1,
+            });
+        } else if (key === "ArrowDown") {
+            this.setState({
+                [name]: this.state[name] > 0 ? this.state[name] - 1 : 0,
+            });
+        }
     }
 
     render() {
@@ -31,70 +66,30 @@ export default class BorderRadius extends Component {
             borderBottomRightRadius,
             borderWidth,
         } = this.state;
+
         return (
             <>
                 <div className="border-radius">
                     <div className="border-radius__inputs">
-                        <h4>top-left</h4>
-                        <input
-                            className="border-radius__input"
-                            type="text"
-                            value={borderTopLeftRadius}
-                            onChange={(e) =>
-                                this.handleInputChange(
-                                    "borderTopLeftRadius",
-                                    e.target.value
-                                )
-                            }
-                        />
-                        <h4>top-right</h4>
-                        <input
-                            className="border-radius__input"
-                            type="text"
-                            value={borderTopRightRadius}
-                            onChange={(e) =>
-                                this.handleInputChange(
-                                    "borderTopRightRadius",
-                                    e.target.value
-                                )
-                            }
-                        />
-                        <h4>bottom-left</h4>
-                        <input
-                            className="border-radius__input"
-                            type="text"
-                            value={borderBottomLeftRadius}
-                            onChange={(e) =>
-                                this.handleInputChange(
-                                    "borderBottomLeftRadius",
-                                    e.target.value
-                                )
-                            }
-                        />
-                        <h4>bottom-right</h4>
-                        <input
-                            className="border-radius__input"
-                            type="text"
-                            value={borderBottomRightRadius}
-                            onChange={(e) =>
-                                this.handleInputChange(
-                                    "borderBottomRightRadius",
-                                    e.target.value
-                                )
-                            }
-                        />
-                        <h4>width</h4>
-                        <input
-                            className="border-radius__input"
-                            type="text"
-                            value={borderWidth}
-                            onChange={(e) =>
-                                this.handleInputChange(
-                                    "borderWidth",
-                                    e.target.value
-                                )
-                            }
-                        />
+                        {this.inputs.map(({ label, name }) => (
+                            <div className="input-group" key={name}>
+                                <h4>{label}</h4>
+                                <input
+                                    className="border-radius__input"
+                                    type="text"
+                                    value={this.state[name]}
+                                    onChange={(e) =>
+                                        this.handleInputChange(
+                                            name,
+                                            e.target.value
+                                        )
+                                    }
+                                    onKeyDown={(e) =>
+                                        this.handleKeyDown(name, e.key)
+                                    }
+                                />
+                            </div>
+                        ))}
                     </div>
                     <div className="border-radius__output">
                         <div
