@@ -1,0 +1,38 @@
+$mainColor: #179cde;
+
+.header-app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $mainColor;
+    padding: 25px 15px 25px 15px;
+}
+
+.header-title {
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0;
+}
+
+.header-navbar {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    li {
+        margin: 0 10px;
+    }
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease 0.02s;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+.active-link {
+    background-color: rgba(255, 255, 255, 0.2);
+}
