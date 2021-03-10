@@ -48,3 +48,12 @@
     font-size: 30px;
     font-weight: 500;
 }
+
+.btn-copy-border {
+    margin: 25px auto 40px auto;
+    display: block;
+    padding: 20px;
+    width: 842px;
+    font-size: 2rem;
+    cursor: pointer;
+}

@@ -58,6 +58,15 @@ export default class BorderRadius extends Component {
         }
     }
 
+    onCopyText() {
+        let r = document.createRange();
+        r.selectNode(document.querySelector(".border-radius-output"));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+    }
+    
     render() {
         const {
             borderTopLeftRadius,
@@ -119,6 +128,9 @@ export default class BorderRadius extends Component {
                     {`border-bottom-right-radius: ${borderBottomRightRadius}px;`}
                     <br />
                 </div>
+                <button className="btn-copy-border" onClick={this.onCopyText}>
+                    Скопировать текст
+                </button>
             </>
         );
     }
