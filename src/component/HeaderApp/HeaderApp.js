@@ -21,6 +21,15 @@ function HeaderApp() {
                     <NavLink
                         className="navbar-link"
                         activeClassName="active-link"
+                        to="/box-shadow"
+                    >
+                        BoxShadow
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className="navbar-link"
+                        activeClassName="active-link"
                         to="/border-radius"
                     >
                         BorderRadius
