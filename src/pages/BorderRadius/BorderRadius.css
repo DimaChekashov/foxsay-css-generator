@@ -1,30 +1,4 @@
-.border-radius {
-    width: 800px;
-    padding: 20px;
-    border: 1px solid #000000;
-    display: flex;
-    justify-content: center;
-    margin: 45px auto 0 auto;
-}
-
-.border-radius__inputs {
-    width: 200px;
-}
-.border-radius__input {
-    margin-bottom: 15px;
-}
-
-.border-radius__output {
-    width: 400px;
-    margin-left: 20px;
-    border: 1px solid #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.border-radius-result {
+.border-radius__result {
     width: 200px;
     height: 200px;
     background-color: red;
@@ -34,26 +8,4 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     /* transition: all 0.2s ease 0.02s; */
-}
-
-.border-radius__input {
-    outline: none;
-}
-
-.border-radius-output {
-    margin: 25px auto 0 auto;
-    width: 800px;
-    padding: 20px;
-    border: 1px solid #000000;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.btn-copy-border {
-    margin: 25px auto 40px auto;
-    display: block;
-    padding: 20px;
-    width: 842px;
-    font-size: 2rem;
-    cursor: pointer;
 }

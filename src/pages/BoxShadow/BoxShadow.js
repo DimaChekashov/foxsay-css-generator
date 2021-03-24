@@ -58,6 +58,16 @@ export default class BoxShadow extends Component {
         }
     }
 
+    onCopyText() {
+        let r = document.createRange();
+        r.selectNode(document.querySelector(".generator__output"));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+        alert("Текст скопирован!");
+    }
+
     render() {
         const {
             horizontalLength,
@@ -69,13 +79,13 @@ export default class BoxShadow extends Component {
 
         return (
             <>
-                <div className="box-shadow">
-                    <div className="box-shadow__inputs">
+                <div className="generator box-shadow">
+                    <div className="generator__inputs">
                         {this.inputs.map(({ label, name }) => (
                             <div className="input-group" key={name}>
                                 <h4>{label}</h4>
                                 <input
-                                    className="border-radius__input"
+                                    className="input-group__input"
                                     type="text"
                                     value={this.state[name]}
                                     onChange={(e) =>
@@ -91,18 +101,21 @@ export default class BoxShadow extends Component {
                             </div>
                         ))}
                     </div>
-                    <div className="box-shadow__output">
+                    <div className="generator__result-wrapper">
                         <div
-                            className="box-shadow-result"
+                            className="box-shadow__result"
                             style={{
                                 boxShadow: `${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(0, 0, 0, ${opacityBox})`,
                             }}
                         ></div>
                     </div>
                 </div>
-                <div className="box-shadow-output">
+                <div className="generator__output">
                     {`box-shadow: ${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(0, 0, 0, ${opacityBox})`}
                 </div>
+                <button className="btn-copy" onClick={this.onCopyText}>
+                    Скопировать текст
+                </button>
             </>
         );
     }

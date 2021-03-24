@@ -1,54 +1,6 @@
-.box-shadow {
-    width: 800px;
-    padding: 20px;
-    border: 1px solid #000000;
-    display: flex;
-    justify-content: center;
-    margin: 45px auto 0 auto;
-}
-
-.box-shadow__inputs {
-    width: 200px;
-}
-.box-shadow__input {
-    margin-bottom: 15px;
-}
-
-.box-shadow__output {
-    width: 400px;
-    margin-left: 20px;
-    border: 1px solid #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.box-shadow-result {
+.box-shadow__result {
     width: 200px;
     height: 200px;
     background-color: red;
     /* transition: all 0.2s ease 0.02s; */
-}
-
-.box-shadow__input {
-    outline: none;
-}
-
-.box-shadow-output {
-    margin: 25px auto 0 auto;
-    width: 800px;
-    padding: 20px;
-    border: 1px solid #000000;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.btn-copy-border {
-    margin: 25px auto 40px auto;
-    display: block;
-    padding: 20px;
-    width: 842px;
-    font-size: 2rem;
-    cursor: pointer;
 }

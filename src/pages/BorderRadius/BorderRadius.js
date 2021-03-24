@@ -60,13 +60,14 @@ export default class BorderRadius extends Component {
 
     onCopyText() {
         let r = document.createRange();
-        r.selectNode(document.querySelector(".border-radius-output"));
+        r.selectNode(document.querySelector(".generator__output"));
         window.getSelection().removeAllRanges();
         window.getSelection().addRange(r);
         document.execCommand("copy");
         window.getSelection().removeAllRanges();
+        alert("Текст скопирован!");
     }
-    
+
     render() {
         const {
             borderTopLeftRadius,
@@ -78,13 +79,13 @@ export default class BorderRadius extends Component {
 
         return (
             <>
-                <div className="border-radius">
-                    <div className="border-radius__inputs">
+                <div className="generator border-radius">
+                    <div className="generator__inputs">
                         {this.inputs.map(({ label, name }) => (
                             <div className="input-group" key={name}>
                                 <h4>{label}</h4>
                                 <input
-                                    className="border-radius__input"
+                                    className="input-group__input"
                                     type="text"
                                     value={this.state[name]}
                                     onChange={(e) =>
@@ -100,9 +101,9 @@ export default class BorderRadius extends Component {
                             </div>
                         ))}
                     </div>
-                    <div className="border-radius__output">
+                    <div className="generator__result-wrapper">
                         <div
-                            className="border-radius-result"
+                            className="border-radius__result"
                             style={{
                                 borderTopLeftRadius: borderTopLeftRadius + "px",
                                 borderTopRightRadius:
@@ -116,7 +117,7 @@ export default class BorderRadius extends Component {
                         ></div>
                     </div>
                 </div>
-                <div className="border-radius-output">
+                <div className="generator__output">
                     {`border: ${borderWidth}px solid #000000;`}
                     <br />
                     {`border-top-left-radius: ${borderTopLeftRadius}px;`}
@@ -128,7 +129,7 @@ export default class BorderRadius extends Component {
                     {`border-bottom-right-radius: ${borderBottomRightRadius}px;`}
                     <br />
                 </div>
-                <button className="btn-copy-border" onClick={this.onCopyText}>
+                <button className="btn-copy" onClick={this.onCopyText}>
                     Скопировать текст
                 </button>
             </>
