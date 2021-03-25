@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./BorderRadius.css";
+import { onCopyText } from "../../utils/utils";
 
 export default class BorderRadius extends Component {
     inputs = [
@@ -56,16 +57,6 @@ export default class BorderRadius extends Component {
                 [name]: this.state[name] > 0 ? this.state[name] - 1 : 0,
             });
         }
-    }
-
-    onCopyText() {
-        let r = document.createRange();
-        r.selectNode(document.querySelector(".generator__output"));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand("copy");
-        window.getSelection().removeAllRanges();
-        alert("Текст скопирован!");
     }
 
     render() {
@@ -129,7 +120,10 @@ export default class BorderRadius extends Component {
                     {`border-bottom-right-radius: ${borderBottomRightRadius}px;`}
                     <br />
                 </div>
-                <button className="btn-copy" onClick={this.onCopyText}>
+                <button
+                    className="btn-copy"
+                    onClick={() => onCopyText(".generator__output")}
+                >
                     Скопировать текст
                 </button>
             </>

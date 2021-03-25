@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./BoxShadow.css";
+import { onCopyText } from "../../utils/utils";
 
 export default class BoxShadow extends Component {
     inputs = [
@@ -58,16 +59,6 @@ export default class BoxShadow extends Component {
         }
     }
 
-    onCopyText() {
-        let r = document.createRange();
-        r.selectNode(document.querySelector(".generator__output"));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand("copy");
-        window.getSelection().removeAllRanges();
-        alert("Текст скопирован!");
-    }
-
     render() {
         const {
             horizontalLength,
@@ -113,7 +104,10 @@ export default class BoxShadow extends Component {
                 <div className="generator__output">
                     {`box-shadow: ${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(0, 0, 0, ${opacityBox})`}
                 </div>
-                <button className="btn-copy" onClick={this.onCopyText}>
+                <button
+                    className="btn-copy"
+                    onClick={() => onCopyText(".generator__output")}
+                >
                     Скопировать текст
                 </button>
             </>
