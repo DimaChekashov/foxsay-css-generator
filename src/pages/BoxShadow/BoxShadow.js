@@ -7,22 +7,37 @@ export default class BoxShadow extends Component {
         {
             label: "Horizontal Length",
             name: "horizontalLength",
+            eventKeyName: (name, key) => {
+                this.handleKeyDown(name, key);
+            },
         },
         {
             label: "Vertical Length",
             name: "verticalLength",
+            eventKeyName: (name, key) => {
+                this.handleKeyDown(name, key);
+            },
         },
         {
             label: "Blur Radius",
             name: "blurRadius",
+            eventKeyName: (name, key) => {
+                this.handleKeyDown(name, key);
+            },
         },
         {
             label: "Spread Radius",
             name: "spreadRadius",
+            eventKeyName: (name, key) => {
+                this.handleKeyDown(name, key);
+            },
         },
         {
             label: "Opacity Box",
             name: "opacityBox",
+            eventKeyName: (name, key) => {
+                this.handleKeyDownOpacity(name, key);
+            },
         },
     ];
 
@@ -39,6 +54,7 @@ export default class BoxShadow extends Component {
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
+        this.handleKeyDownOpacity = this.handleKeyDownOpacity.bind(this);
     }
 
     handleInputChange(name, val) {
@@ -50,11 +66,28 @@ export default class BoxShadow extends Component {
     handleKeyDown(name, key) {
         if (key === "ArrowUp") {
             this.setState({
-                [name]: this.state[name] + 1,
+                [name]: this.state[name] >= 100 ? 100 : this.state[name] + 1,
             });
         } else if (key === "ArrowDown") {
             this.setState({
-                [name]: this.state[name] > 0 ? this.state[name] - 1 : 0,
+                [name]: this.state[name] > -100 ? this.state[name] - 1 : -100,
+            });
+        }
+    }
+    handleKeyDownOpacity(name, key) {
+        if (key === "ArrowUp") {
+            this.setState({
+                [name]:
+                    this.state[name] >= 1
+                        ? 1
+                        : +(this.state[name] + 0.01).toFixed(2),
+            });
+        } else if (key === "ArrowDown") {
+            this.setState({
+                [name]:
+                    this.state[name] > 0
+                        ? (this.state[name] - 0.01).toFixed(2)
+                        : 0,
             });
         }
     }
@@ -72,7 +105,7 @@ export default class BoxShadow extends Component {
             <>
                 <div className="generator box-shadow">
                     <div className="generator__inputs">
-                        {this.inputs.map(({ label, name }) => (
+                        {this.inputs.map(({ label, name, eventKeyName }) => (
                             <div className="input-group" key={name}>
                                 <h4>{label}</h4>
                                 <input
@@ -85,9 +118,7 @@ export default class BoxShadow extends Component {
                                             e.target.value
                                         )
                                     }
-                                    onKeyDown={(e) =>
-                                        this.handleKeyDown(name, e.key)
-                                    }
+                                    onKeyDown={(e) => eventKeyName(name, e.key)}
                                 />
                             </div>
                         ))}
