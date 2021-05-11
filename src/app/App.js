@@ -11,17 +11,19 @@ function App() {
         <>
             <HeaderApp />
             <div className="container">
-                <Switch>
-                    <Route path="/border-radius">
-                        <BorderRadius />
-                    </Route>
-                    <Route path="/box-shadow">
-                        <BoxShadow />
-                    </Route>
-                    <Route path="/">
-                        <MainPage />
-                    </Route>
-                </Switch>
+                <div className="wrapper">
+                    <Switch>
+                        <Route path="/border-radius">
+                            <BorderRadius />
+                        </Route>
+                        <Route path="/box-shadow">
+                            <BoxShadow />
+                        </Route>
+                        <Route path="/">
+                            <MainPage />
+                        </Route>
+                    </Switch>
+                </div>
             </div>
         </>
     );
