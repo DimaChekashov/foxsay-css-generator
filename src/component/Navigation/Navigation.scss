@@ -1,0 +1,24 @@
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation-btn {
+    color: #fff;
+    background-color: rgba(23, 156, 222, 1);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+    width: 33.3333333333%;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: rgba(23, 156, 222, 0.8);
+    }
+}
