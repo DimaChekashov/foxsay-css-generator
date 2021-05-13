@@ -1,132 +1,108 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./BorderRadius.css";
 import { onCopyText } from "../../utils/utils";
 
-export default class BorderRadius extends Component {
-    inputs = [
+function BorderRadius(props) {
+    const [borderTopLeftRadius, setBorderTopLeftRadius] = useState(10);
+    const [borderTopRightRadius, setBorderTopRightRadius] = useState(10);
+    const [borderBottomLeftRadius, setBorderBottomLeftRadius] = useState(10);
+    const [borderBottomRightRadius, setBorderBottomRightRadius] = useState(10);
+    const [borderWidth, setBorderWidth] = useState(5);
+
+    const inputs = [
         {
             label: "top-left",
-            name: "borderTopLeftRadius",
+            value: borderTopLeftRadius,
+            name: setBorderTopLeftRadius,
         },
         {
             label: "top-right",
-            name: "borderTopRightRadius",
+            value: borderTopRightRadius,
+            name: setBorderTopRightRadius,
         },
         {
             label: "bottom-left",
-            name: "borderBottomLeftRadius",
+            value: borderBottomLeftRadius,
+            name: setBorderBottomLeftRadius,
         },
         {
             label: "bottom-right",
-            name: "borderBottomRightRadius",
+            value: borderBottomRightRadius,
+            name: setBorderBottomRightRadius,
         },
         {
             label: "width",
-            name: "borderWidth",
+            value: borderWidth,
+            name: setBorderWidth,
         },
     ];
 
-    constructor() {
-        super();
-
-        this.state = {
-            borderTopLeftRadius: 10,
-            borderTopRightRadius: 10,
-            borderBottomLeftRadius: 10,
-            borderBottomRightRadius: 10,
-            borderWidth: 5,
-        };
-
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleKeyDown = this.handleKeyDown.bind(this);
-    }
-
-    handleInputChange(name, val) {
+    function handleInputChange(name, val) {
         if (!Number.isInteger(+val)) return;
-        this.setState({
-            [name]: +val || 0,
-        });
+        name(+val || 0);
     }
-    handleKeyDown(name, key) {
+
+    function handleKeyDown(name, key) {
         if (key === "ArrowUp") {
-            this.setState({
-                [name]: this.state[name] + 1,
-            });
+            name((prevCount) => prevCount + 1);
         } else if (key === "ArrowDown") {
-            this.setState({
-                [name]: this.state[name] > 0 ? this.state[name] - 1 : 0,
-            });
+            name((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
         }
     }
-
-    render() {
-        const {
-            borderTopLeftRadius,
-            borderTopRightRadius,
-            borderBottomLeftRadius,
-            borderBottomRightRadius,
-            borderWidth,
-        } = this.state;
-
-        return (
-            <>
-                <div className="generator border-radius">
-                    <div className="generator__inputs">
-                        {this.inputs.map(({ label, name }) => (
-                            <div className="input-group" key={name}>
-                                <h4>{label}</h4>
-                                <input
-                                    className="input-group__input"
-                                    type="text"
-                                    value={this.state[name]}
-                                    onChange={(e) =>
-                                        this.handleInputChange(
-                                            name,
-                                            e.target.value
-                                        )
-                                    }
-                                    onKeyDown={(e) =>
-                                        this.handleKeyDown(name, e.key)
-                                    }
-                                />
-                            </div>
-                        ))}
-                    </div>
-                    <div className="generator__result-wrapper">
-                        <div
-                            className="border-radius__result"
-                            style={{
-                                borderTopLeftRadius: borderTopLeftRadius + "px",
-                                borderTopRightRadius:
-                                    borderTopRightRadius + "px",
-                                borderBottomLeftRadius:
-                                    borderBottomLeftRadius + "px",
-                                borderBottomRightRadius:
-                                    borderBottomRightRadius + "px",
-                                border: borderWidth + "px solid #000000",
-                            }}
-                        ></div>
-                    </div>
+    return (
+        <>
+            <div className="generator border-radius">
+                <div className="generator__inputs">
+                    {inputs.map(({ label, name, value }) => (
+                        <div className="input-group" key={label}>
+                            <h4>{label}</h4>
+                            <input
+                                className="input-group__input"
+                                type="text"
+                                value={value}
+                                onChange={(e) =>
+                                    handleInputChange(name, e.target.value)
+                                }
+                                onKeyDown={(e) => handleKeyDown(name, e.key)}
+                            />
+                        </div>
+                    ))}
                 </div>
-                <div className="generator__output">
-                    {`border: ${borderWidth}px solid #000000;`}
-                    <br />
-                    {`border-top-left-radius: ${borderTopLeftRadius}px;`}
-                    <br />
-                    {`border-top-right-radius: ${borderTopRightRadius}px;`}
-                    <br />
-                    {`border-bottom-left-radius: ${borderBottomLeftRadius}px;`}
-                    <br />
-                    {`border-bottom-right-radius: ${borderBottomRightRadius}px;`}
-                    <br />
+                <div className="generator__result-wrapper">
+                    <div
+                        className="border-radius__result"
+                        style={{
+                            borderTopLeftRadius: borderTopLeftRadius + "px",
+                            borderTopRightRadius: borderTopRightRadius + "px",
+                            borderBottomLeftRadius:
+                                borderBottomLeftRadius + "px",
+                            borderBottomRightRadius:
+                                borderBottomRightRadius + "px",
+                            border: borderWidth + "px solid #000000",
+                        }}
+                    ></div>
                 </div>
-                <button
-                    className="btn-copy"
-                    onClick={() => onCopyText(".generator__output")}
-                >
-                    Скопировать текст
-                </button>
-            </>
-        );
-    }
+            </div>
+            <div className="generator__output">
+                {`border: ${borderWidth}px solid #000000;`}
+                <br />
+                {`border-top-left-radius: ${borderTopLeftRadius}px;`}
+                <br />
+                {`border-top-right-radius: ${borderTopRightRadius}px;`}
+                <br />
+                {`border-bottom-left-radius: ${borderBottomLeftRadius}px;`}
+                <br />
+                {`border-bottom-right-radius: ${borderBottomRightRadius}px;`}
+                <br />
+            </div>
+            <button
+                className="btn-copy"
+                onClick={() => onCopyText(".generator__output")}
+            >
+                Скопировать текст
+            </button>
+        </>
+    );
 }
+
+export default BorderRadius;
