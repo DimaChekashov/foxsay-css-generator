@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import HeaderApp from "../component/HeaderApp/HeaderApp";
+import HeaderApp from "../component/HeaderApp/HeaderApp.jsx";
+import Footer from "../component/Footer/Footer.jsx";
 import MainPage from "../pages/MainPage/MainPage";
 import BorderRadius from "../pages/BorderRadius/BorderRadius";
 import BoxShadow from "../pages/BoxShadow/BoxShadow";
@@ -8,7 +9,7 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
     return (
-        <>
+        <div className="page-container">
             <HeaderApp />
             <div className="container">
                 <div className="wrapper">
@@ -25,7 +26,8 @@ function App() {
                     </Switch>
                 </div>
             </div>
-        </>
+            <Footer />
+        </div>
     );
 }
 

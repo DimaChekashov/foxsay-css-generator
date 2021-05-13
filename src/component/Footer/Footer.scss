@@ -1,0 +1,31 @@
+.footer {
+    background-color: #20232a;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    li {
+        padding: 0 15px;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        &:hover {
+            color: #fff;
+            opacity: 0.5;
+        }
+    }
+}
