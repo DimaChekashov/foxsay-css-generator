@@ -14,6 +14,10 @@ function Navigation() {
                 className="navigation-btn"
                 to="/border-radius"
             >BorderRadius</NavLink>
+            <NavLink
+                className="navigation-btn"
+                to="/background-color"
+            >BackgroundColor</NavLink>
         </div>
     );
 }

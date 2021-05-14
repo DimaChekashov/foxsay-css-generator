@@ -35,6 +35,15 @@ function HeaderApp() {
                         BorderRadius
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        className="navbar-link"
+                        activeClassName="active-link"
+                        to="/background-color"
+                    >
+                        BackgroundColor
+                    </NavLink>
+                </li>
             </ul>
         </header>
     );
