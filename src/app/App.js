@@ -9,6 +9,7 @@ import MainPage from "../pages/MainPage/MainPage";
 import BorderRadius from "../pages/BorderRadius/BorderRadius";
 import BoxShadow from "../pages/BoxShadow/BoxShadow";
 import BackgroundColor from "../pages/BackgroundColor/BackgroundColor";
+import Text from "../pages/Text/Text";
 
 function App() {
     return (
@@ -17,6 +18,9 @@ function App() {
             <div className="container">
                 <div className="wrapper">
                     <Switch>
+                        <Route path="/text">
+                            <Text />
+                        </Route>
                         <Route path="/background-color">
                             <BackgroundColor />
                         </Route>
