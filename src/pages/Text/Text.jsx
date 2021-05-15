@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
+import SliderFox from '../../component/SliderFox/SliderFox';
 
 import './Text.scss';
 
@@ -10,8 +8,7 @@ function Text() {
     return (
         <>
             <h1>Text</h1>
-            <Slider onChange={setValue} value={value}/>
-            <div>{value}</div>
+            <SliderFox value={value} setValue={setValue} min={0} max={100}/>
         </>
     );
 }

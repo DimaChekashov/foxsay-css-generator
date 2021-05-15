@@ -1,0 +1,47 @@
+.rc-slider {
+    .rc-slider-rail {
+        height: 8px;
+    }
+    .rc-slider-track {
+        height: 8px;
+        background-color: #3abb67;
+    }
+    .rc-slider-step {
+        height: 8px;
+    }
+    .rc-slider-handle {
+        height: 24px;
+        width: 24px;
+        margin-top: -7px;
+        border-color: #3abb67;
+        box-shadow: 0 0 5px #3abb67;
+        &:hover {
+            border-color: #3ec46d;
+        }
+        &:active {
+            border-color: #3abb67;
+            box-shadow: 0 0 5px #3abb67;
+        }
+        &:focus {
+            border-color: #3abb67;
+            box-shadow: 0 0 5px #3abb67;
+        }
+    }
+}
+
+.foxslider {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.foxslider__text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 10px;
+    h5 {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
