@@ -8,8 +8,8 @@ import './SliderFox.scss';
 function SliderFox(props) {
     return (
         <div className="foxslider">
-            <Slider onChange={props.setValue} value={props.value}/>
-            <div className="foxslider__text"><h5>{props.min}</h5><h5>{props.max}</h5></div>
+            <Slider onChange={props.setValue} value={props.value} min={props.min} max={props.max}/>
+            <div className="foxslider__text"><h5>{props.minText}</h5><h5>{props.maxText}</h5></div>
         </div>
     )
 }

@@ -17,15 +17,15 @@ function BackgroundColor() {
     });
 
     function handleClick() {
-        setDisplayColorPicker(!displayColorPicker)
-      };
+      setDisplayColorPicker(!displayColorPicker)
+    };
     
-      function handleClose() {
-        setDisplayColorPicker(false)
+    function handleClose() {
+      setDisplayColorPicker(false)
     };
 
     function handleChange(color) {
-        setColor(color.rgb);
+      setColor(color.rgb);
     };
     const styles = reactCSS({
         'default': {
@@ -78,7 +78,7 @@ function BackgroundColor() {
                     </div>
                 </div>
                 <div className="generator__result-wrapper">
-                    <div className="border-radius__result" style={styles.result}></div>
+                    <div className="background-color__result" style={styles.result}></div>
                 </div>
             </div>
             <div className="generator__output">
