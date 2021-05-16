@@ -10,6 +10,7 @@ import BorderRadius from "../pages/BorderRadius/BorderRadius";
 import BoxShadow from "../pages/BoxShadow/BoxShadow";
 import BackgroundColor from "../pages/BackgroundColor/BackgroundColor";
 import Text from "../pages/Text/Text";
+import TextShadow from "../pages/TextShadow/TextShadow";
 
 function App() {
     return (
@@ -18,6 +19,9 @@ function App() {
             <div className="container">
                 <div className="wrapper">
                     <Switch>
+                        <Route path="/text-shadow">
+                            <TextShadow/>
+                        </Route>
                         <Route path="/text">
                             <Text />
                         </Route>

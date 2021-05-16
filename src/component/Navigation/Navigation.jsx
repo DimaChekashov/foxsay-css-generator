@@ -27,6 +27,10 @@ function Navigation() {
                     className="navigation-btn"
                     to="/text"
                 >Text</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/text-shadow"
+                >TextShadow</NavLink>
             </div>
         </div>
     );
