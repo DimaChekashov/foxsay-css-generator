@@ -1,0 +1,35 @@
+.nav-sidebar {
+    max-width: 300px;
+    min-width: 300px;
+    border-right: 1px solid #dbdbdb;
+    background-color: #fff;
+}
+
+.nav-sidebar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.nav-sidebar__link {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.nav-sidebar__link.active-link {
+    background-color: #ededed;
+}
+
+.nav-sidebar__subtitle {
+    padding: 0 10px;
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}

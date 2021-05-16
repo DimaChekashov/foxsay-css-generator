@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
     return (
         <div className="navigation">
-            <h3 className="navigation__label">Text</h3>
+            <h3 className="navigation__label">Разное</h3>
             <div className="navigation__group">
                 <NavLink
                     className="navigation-btn"

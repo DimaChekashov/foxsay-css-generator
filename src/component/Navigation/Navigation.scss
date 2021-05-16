@@ -1,6 +1,7 @@
 .navigation__group {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .navigation-btn {
@@ -21,4 +22,10 @@
     &:hover {
         background-color: rgba(23, 156, 222, 0.8);
     }
+}
+
+.navigation__label {
+    margin: 0 10px 5px 10px;
+    font-weight: 400;
+    font-size: 1.5rem;
 }

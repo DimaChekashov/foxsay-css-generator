@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import HeaderApp from "../component/HeaderApp/HeaderApp.jsx";
 import Footer from "../component/Footer/Footer.jsx";
@@ -11,37 +11,48 @@ import BoxShadow from "../pages/BoxShadow/BoxShadow";
 import BackgroundColor from "../pages/BackgroundColor/BackgroundColor";
 import Text from "../pages/Text/Text";
 import TextShadow from "../pages/TextShadow/TextShadow";
+import NavSidebar from "../component/NavSidebar/NavSidebar";
 
 function App() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
     return (
-        <div className="page-container">
+        <>
             <HeaderApp />
-            <div className="container">
-                <div className="wrapper">
-                    <Switch>
-                        <Route path="/text-shadow">
-                            <TextShadow/>
-                        </Route>
-                        <Route path="/text">
-                            <Text />
-                        </Route>
-                        <Route path="/background-color">
-                            <BackgroundColor />
-                        </Route>
-                        <Route path="/border-radius">
-                            <BorderRadius />
-                        </Route>
-                        <Route path="/box-shadow">
-                            <BoxShadow />
-                        </Route>
-                        <Route path="/">
-                            <MainPage />
-                        </Route>
-                    </Switch>
+            <div className="app">
+                <NavSidebar
+                    isSidebarOpen={isSidebarOpen}
+                    setIsSidebarOpen={setIsSidebarOpen}
+                />
+                <div className="page-container">
+                    <div className="container">
+                        <div className="wrapper">
+                            <Switch>
+                                <Route path="/text-shadow">
+                                    <TextShadow />
+                                </Route>
+                                <Route path="/text">
+                                    <Text />
+                                </Route>
+                                <Route path="/background-color">
+                                    <BackgroundColor />
+                                </Route>
+                                <Route path="/border-radius">
+                                    <BorderRadius />
+                                </Route>
+                                <Route path="/box-shadow">
+                                    <BoxShadow />
+                                </Route>
+                                <Route path="/">
+                                    <MainPage />
+                                </Route>
+                            </Switch>
+                        </div>
+                    </div>
+                    <Footer />
                 </div>
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }
 
