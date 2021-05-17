@@ -24,6 +24,25 @@ function Navigation() {
                     to="/background-color"
                 >BackgroundColor</NavLink>
             </div>
+            <h3 className="navigation__label">Transform</h3>
+            <div className="navigation__group">
+                <NavLink
+                    className="navigation-btn"
+                    to="/translate"
+                >Translate</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/rotate"
+                >Rotate</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/scale"
+                >Scale</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/skew"
+                >Skew</NavLink>
+            </div>
             <h3 className="navigation__label">Text</h3>
             <div className="navigation__group">
                 <NavLink

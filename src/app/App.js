@@ -12,6 +12,10 @@ import BackgroundColor from "../pages/BackgroundColor/BackgroundColor";
 import Text from "../pages/Text/Text";
 import TextShadow from "../pages/TextShadow/TextShadow";
 import NavSidebar from "../component/NavSidebar/NavSidebar";
+import Translate from "../pages/Translate/Translate";
+import Rotate from "../pages/Rotate/Rotate";
+import Scale from "../pages/Scale/Scale";
+import Skew from "../pages/Skew/Skew";
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -28,6 +32,18 @@ function App() {
                     <div className="container">
                         <div className="wrapper">
                             <Switch>
+                                <Route path="/skew">
+                                    <Skew />
+                                </Route>
+                                <Route path="/scale">
+                                    <Scale />
+                                </Route>
+                                <Route path="/rotate">
+                                    <Rotate />
+                                </Route>
+                                <Route path="/translate">
+                                    <Translate />
+                                </Route>
                                 <Route path="/text-shadow">
                                     <TextShadow />
                                 </Route>

@@ -85,3 +85,15 @@ body {
 .btn-copy:hover {
     background-color: #3ec46d;
 }
+
+.transform-box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
