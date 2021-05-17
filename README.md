@@ -6,6 +6,8 @@
 
 #### Border
 
-[BorderRadius](https://github.com/DimaChekashov/foxsay-css-generator)
+[BorderRadius](https://dimachekashov.github.io/foxsay-css-generator/pages/border-radius)
 
-[BoxShadow](https://github.com/DimaChekashov/foxsay-css-generator)
+[BoxShadow](https://dimachekashov.github.io/foxsay-css-generator/pages/box-shadow)
+
+Demo - https://dimachekashov.github.io/foxsay-css-generator/pages/
