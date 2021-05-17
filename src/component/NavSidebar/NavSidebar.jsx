@@ -52,6 +52,24 @@ function NavSidebar(props) {
                     BackgroundColor
                 </NavLink>
             </li>
+            <li>
+                <NavLink
+                    className="nav-sidebar__link"
+                    activeClassName="active-link"
+                    to="/background-gradient"
+                >
+                    BackgroundGradient
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    className="nav-sidebar__link"
+                    activeClassName="active-link"
+                    to="/background-image"
+                >
+                    BackgroundImage
+                </NavLink>
+            </li>
         </ul>
         <h4 className="nav-sidebar__subtitle">Transform</h4>
         <ul className="nav-sidebar__list">

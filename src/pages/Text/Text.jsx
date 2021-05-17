@@ -55,13 +55,13 @@ function Text() {
     })
     const selectStyles = {
         option: (provided, state) => ({
-          ...provided,
-          backgroundColor: state.isSelected ? '#3abb67;' : 'white'
+            ...provided,
+            backgroundColor: state.isSelected ? '#3abb67;' : 'white'
         }),
         control: (provided) => ({
-          ...provided,
+            ...provided,
         })
-      }
+    }
 
     return (
         <div>

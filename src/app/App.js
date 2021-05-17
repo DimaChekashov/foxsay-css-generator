@@ -16,6 +16,8 @@ import Translate from "../pages/Translate/Translate";
 import Rotate from "../pages/Rotate/Rotate";
 import Scale from "../pages/Scale/Scale";
 import Skew from "../pages/Skew/Skew";
+import BackgroundGradient from "../pages/BackgroundGradient/BackgroundGradient";
+import BackgroundImage from "../pages/BackgroundImage/BackgroundImage";
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -32,6 +34,12 @@ function App() {
                     <div className="container">
                         <div className="wrapper">
                             <Switch>
+                                <Route path="/background-image">
+                                    <BackgroundImage />
+                                </Route>
+                                <Route path="/background-gradient">
+                                    <BackgroundGradient />
+                                </Route>
                                 <Route path="/skew">
                                     <Skew />
                                 </Route>

@@ -23,6 +23,14 @@ function Navigation() {
                     className="navigation-btn"
                     to="/background-color"
                 >BackgroundColor</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/background-gradient"
+                >BackgroundGradient</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/background-image"
+                >BackgroundImage</NavLink>
             </div>
             <h3 className="navigation__label">Transform</h3>
             <div className="navigation__group">
