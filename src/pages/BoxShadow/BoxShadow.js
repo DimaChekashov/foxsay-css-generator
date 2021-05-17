@@ -1,110 +1,125 @@
 import React, { useState } from "react";
 import "./BoxShadow.css";
+
 import { onCopyText } from "../../utils/utils";
+import reactCSS from "reactcss";
+import PickColor from "../../component/PickColor/PickColor";
+import PickColorRGB from "../../component/PickColor/PickColorRGB";
+import SliderFox from "../../component/SliderFox/SliderFox";
 
 function BoxShadow(props) {
+    const [color, setColor] = useState({
+        r: "0",
+        g: "0",
+        b: "0",
+        a: "1",
+    });
+    const [backgroundColor, setBackgroundColor] = useState({
+        hex: "#ff0000",
+    });
     const [horizontalLength, setHorizontalLength] = useState(10);
     const [verticalLength, setVerticalLength] = useState(10);
     const [blurRadius, setBlurRadius] = useState(10);
     const [spreadRadius, setSpreadRadius] = useState(10);
-    const [opacityBox, setOpacityBox] = useState(0.75);
+    const [opacityBox, setOpacityBox] = useState(75);
 
-    const inputs = [
-        {
-            label: "Horizontal Length",
-            name: horizontalLength,
-            setValue: setHorizontalLength,
-            eventKeyName: (setValue, key) => {
-                handleKeyDown(setValue, key);
+    const styles = reactCSS({
+        default: {
+            result: {
+                backgroundColor: backgroundColor.hex,
+                boxShadow: `${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(${
+                    color.r
+                }, ${color.g}, ${color.b}, ${+(opacityBox * 0.01).toFixed(2)})`,
             },
         },
-        {
-            label: "Vertical Length",
-            name: verticalLength,
-            setValue: setVerticalLength,
-            eventKeyName: (setValue, key) => {
-                handleKeyDown(setValue, key);
-            },
-        },
-        {
-            label: "Blur Radius",
-            name: blurRadius,
-            setValue: setBlurRadius,
-            eventKeyName: (setValue, key) => {
-                handleKeyDown(setValue, key);
-            },
-        },
-        {
-            label: "Spread Radius",
-            name: spreadRadius,
-            setValue: setSpreadRadius,
-            eventKeyName: (setValue, key) => {
-                handleKeyDown(setValue, key);
-            },
-        },
-        {
-            label: "Opacity Box",
-            name: opacityBox,
-            setValue: setOpacityBox,
-            eventKeyName: (setValue, key) => {
-                handleKeyDownOpacity(setValue, key);
-            },
-        },
-    ];
-
-    function handleInputChange(setValue, val) {
-        if (!Number.isInteger(+val)) return;
-        setValue(+val || 0);
-    }
-    function handleKeyDown(setValue, key) {
-        if (key === "ArrowUp") {
-            setValue((prevCount) => (prevCount >= 100 ? 100 : prevCount + 1));
-        } else if (key === "ArrowDown") {
-            setValue((prevCount) => (prevCount > -100 ? prevCount - 1 : -100));
-        }
-    }
-    function handleKeyDownOpacity(setValue, key) {
-        if (key === "ArrowUp") {
-            setValue((prevCount) =>
-                prevCount >= 1 ? 1 : +(prevCount + 0.01).toFixed(2)
-            );
-        } else if (key === "ArrowDown") {
-            setValue((prevCount) =>
-                prevCount > 0 ? (prevCount - 0.01).toFixed(2) : 0
-            );
-        }
-    }
+    });
 
     return (
         <>
             <div className="generator box-shadow">
                 <div className="generator__inputs">
-                    {inputs.map(({ label, name, setValue, eventKeyName }) => (
-                        <div className="input-group" key={label}>
-                            <h4>{label}</h4>
-                            <input
-                                className="input-group__input"
-                                type="text"
-                                value={name}
-                                onChange={(e) =>
-                                    handleInputChange(setValue, e.target.value)
-                                }
-                                onKeyDown={(e) => eventKeyName(setValue, e.key)}
-                            />
-                        </div>
-                    ))}
+                    <div className="input-group">
+                        <h4>X (pixels)</h4>
+                        <SliderFox
+                            value={horizontalLength}
+                            setValue={setHorizontalLength}
+                            min={-50}
+                            max={50}
+                            minText={-50}
+                            maxText={50}
+                        />
+                    </div>
+                    <div className="input-group">
+                        <h4>Y (pixels)</h4>
+                        <SliderFox
+                            value={verticalLength}
+                            setValue={setVerticalLength}
+                            min={-50}
+                            max={50}
+                            minText={-50}
+                            maxText={50}
+                        />
+                    </div>
+                    <div className="input-group">
+                        <h4>Blur (pixels)</h4>
+                        <SliderFox
+                            value={blurRadius}
+                            setValue={setBlurRadius}
+                            min={0}
+                            max={50}
+                            minText={0}
+                            maxText={50}
+                        />
+                    </div>
+                    <div className="input-group">
+                        <h4>Spread (pixels)</h4>
+                        <SliderFox
+                            value={spreadRadius}
+                            setValue={setSpreadRadius}
+                            min={0}
+                            max={50}
+                            minText={0}
+                            maxText={50}
+                        />
+                    </div>
+                    <div className="input-group">
+                        <h4>Color opacity</h4>
+                        <SliderFox
+                            value={opacityBox}
+                            setValue={setOpacityBox}
+                            min={0}
+                            max={100}
+                            minText={0}
+                            maxText={1}
+                        />
+                    </div>
+                    <div className="input-group">
+                        <h4>Color</h4>
+                        <PickColorRGB color={color} setColor={setColor} />
+                    </div>
+                    <div className="input-group">
+                        <h4>Background Color</h4>
+                        <PickColor
+                            color={backgroundColor}
+                            setColor={setBackgroundColor}
+                        />
+                    </div>
                 </div>
                 <div className="generator__result-wrapper">
                     <div
                         className="box-shadow__result"
-                        style={{
-                            boxShadow: `${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(0, 0, 0, ${opacityBox})`,
-                        }}
+                        style={styles.result}
                     ></div>
                 </div>
             </div>
             <div className="generator__output">
-                {`box-shadow: ${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(0, 0, 0, ${opacityBox})`}
+                {`box-shadow: ${horizontalLength}px ${verticalLength}px ${blurRadius}px ${spreadRadius}px rgba(${
+                    color.r
+                }, ${color.g}, ${color.b}, ${
+                    +(opacityBox * 0.01).toFixed(2) === 1.0
+                        ? 1
+                        : (opacityBox * 0.01).toFixed(2)
+                })`}
             </div>
             <button
                 className="btn-copy"

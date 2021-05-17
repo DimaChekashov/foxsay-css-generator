@@ -6,16 +6,19 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
     return (
         <div className="navigation">
-            <h3 className="navigation__label">Разное</h3>
+            <h3 className="navigation__label">Border</h3>
             <div className="navigation__group">
-                <NavLink
-                    className="navigation-btn"
-                    to="/box-shadow"
-                >BoxShadow</NavLink>
                 <NavLink
                     className="navigation-btn"
                     to="/border-radius"
                 >BorderRadius</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/box-shadow"
+                >BoxShadow</NavLink>
+            </div>
+            <h3 className="navigation__label">Background</h3>
+            <div className="navigation__group">
                 <NavLink
                     className="navigation-btn"
                     to="/background-color"
