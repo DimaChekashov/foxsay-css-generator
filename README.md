@@ -4,34 +4,34 @@
 
 ## Разделы
 
-[Главная страница](https://dimachekashov.github.io/foxsay-css-generator/pages/)
+[Главная страница](https://dimachekashov.github.io/foxsay-css-generator/)
 
 #### Border
 
-[BorderRadius](https://dimachekashov.github.io/foxsay-css-generator/pages/border-radius)
+[BorderRadius](https://dimachekashov.github.io/foxsay-css-generator/#/border-radius)
 
-[BoxShadow](https://dimachekashov.github.io/foxsay-css-generator/pages/box-shadow)
+[BoxShadow](https://dimachekashov.github.io/foxsay-css-generator/#/box-shadow)
 
 #### Background
 
-[BackgroundColor](https://dimachekashov.github.io/foxsay-css-generator/pages/background-color)
+[BackgroundColor](https://dimachekashov.github.io/foxsay-css-generator/#/background-color)
 
-[BackgroundGradient](https://dimachekashov.github.io/foxsay-css-generator/pages/background-gradient)
+[BackgroundGradient](https://dimachekashov.github.io/foxsay-css-generator/#/background-gradient)
 
-[BackgroundImage](https://dimachekashov.github.io/foxsay-css-generator/pages/background-image)
+[BackgroundImage](https://dimachekashov.github.io/foxsay-css-generator/#/background-image)
 
 #### Transform
 
-[Translate](https://dimachekashov.github.io/foxsay-css-generator/pages/translate)
+[Translate](https://dimachekashov.github.io/foxsay-css-generator/#/translate)
 
-[Rotate](https://dimachekashov.github.io/foxsay-css-generator/pages/rotate)
+[Rotate](https://dimachekashov.github.io/foxsay-css-generator/#/rotate)
 
-[Scale](https://dimachekashov.github.io/foxsay-css-generator/pages/scale)
+[Scale](https://dimachekashov.github.io/foxsay-css-generator/#/scale)
 
-[Skew](https://dimachekashov.github.io/foxsay-css-generator/pages/skew)
+[Skew](https://dimachekashov.github.io/foxsay-css-generator/#/skew)
 
 #### Text
 
-[Text](https://dimachekashov.github.io/foxsay-css-generator/pages/text)
+[Text](https://dimachekashov.github.io/foxsay-css-generator/#/text)
 
-[TextShadow](https://dimachekashov.github.io/foxsay-css-generator/pages/text-shadow)
+[TextShadow](https://dimachekashov.github.io/foxsay-css-generator/#/text-shadow)
