@@ -51,6 +51,41 @@ function Navigation() {
                     to="/skew"
                 >Skew</NavLink>
             </div>
+            <h3 className="navigation__label">Filter</h3>
+            <div className="navigation__group">
+                <NavLink
+                    className="navigation-btn"
+                    to="/blur"
+                >Blur</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/brightness"
+                >Brightness</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/contrast"
+                >Contrast</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/grayscale"
+                >Grayscale</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/hue-rotate"
+                >Hue-rotate</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/invert"
+                >Invert</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/saturate"
+                >Saturate</NavLink>
+                <NavLink
+                    className="navigation-btn"
+                    to="/sepia"
+                >Sepia</NavLink>
+            </div>
             <h3 className="navigation__label">Text</h3>
             <div className="navigation__group">
                 <NavLink

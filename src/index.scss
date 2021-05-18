@@ -58,6 +58,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    overflow: hidden;
 }
 
 .generator__output {
@@ -96,4 +97,12 @@ body {
     color: #fff;
     font-size: 2rem;
     font-weight: 700;
+}
+
+.filter-box {
+    background: url("https://www.gardendesign.com/pictures/images/675x529Max/site_3/helianthus-yellow-flower-pixabay_11863.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
 }

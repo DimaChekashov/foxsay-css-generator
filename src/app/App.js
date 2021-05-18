@@ -18,6 +18,14 @@ import Scale from "../pages/Scale/Scale";
 import Skew from "../pages/Skew/Skew";
 import BackgroundGradient from "../pages/BackgroundGradient/BackgroundGradient";
 import BackgroundImage from "../pages/BackgroundImage/BackgroundImage";
+import Blur from "../pages/Blur/Blur";
+import Brightness from "../pages/Brightness/Brightness";
+import Contrast from "../pages/Contrast/Contrast";
+import Grayscale from "../pages/Grayscale/Grayscale";
+import HueRotate from "../pages/HueRotate/HueRotate";
+import Invert from "../pages/Invert/Invert";
+import Saturate from "../pages/Saturate/Saturate";
+import Sepia from "../pages/Sepia/Sepia";
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -34,6 +42,30 @@ function App() {
                     <div className="container">
                         <div className="wrapper">
                             <Switch>
+                                <Route path="/sepia">
+                                    <Sepia />
+                                </Route>
+                                <Route path="/saturate">
+                                    <Saturate />
+                                </Route>
+                                <Route path="/invert">
+                                    <Invert />
+                                </Route>
+                                <Route path="/hue-rotate">
+                                    <HueRotate />
+                                </Route>
+                                <Route path="/grayscale">
+                                    <Grayscale />
+                                </Route>
+                                <Route path="/contrast">
+                                    <Contrast />
+                                </Route>
+                                <Route path="/brightness">
+                                    <Brightness />
+                                </Route>
+                                <Route path="/blur">
+                                    <Blur />
+                                </Route>
                                 <Route path="/background-image">
                                     <BackgroundImage />
                                 </Route>
