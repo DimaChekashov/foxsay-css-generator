@@ -1,4 +1,4 @@
-<p align="center"><img width="100" src="./assets/logo.png" alt="FoxSay Css Generator logo"></p>
+<p align="center"><img width="256" src="./assets/logo.png" alt="FoxSay Css Generator logo"></p>
 <h1 align="center">FoxSay Css Generator</h1>
 <h3 align="center">Приложение генерирующее css-свойства</h3>
 
