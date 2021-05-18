@@ -32,7 +32,10 @@ function App() {
 
     return (
         <>
-            <HeaderApp />
+            <HeaderApp
+                isSidebarOpen={isSidebarOpen}
+                setIsSidebarOpen={setIsSidebarOpen}
+            />
             <div className="app">
                 <NavSidebar
                     isSidebarOpen={isSidebarOpen}

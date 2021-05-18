@@ -29,3 +29,15 @@
     font-weight: 400;
     font-size: 1.5rem;
 }
+
+@media (max-width: 1000px) {
+    .navigation-btn {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 530px) {
+    .navigation-btn {
+        width: calc(100% - 20px);
+    }
+}

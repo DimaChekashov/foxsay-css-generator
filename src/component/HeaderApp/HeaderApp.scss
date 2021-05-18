@@ -3,7 +3,6 @@ $mainColor: #179cde;
 .header-app {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: $mainColor;
     padding: 25px 15px 25px 15px;
 }
@@ -20,5 +19,26 @@ $mainColor: #179cde;
     display: flex;
     li {
         margin: 0 10px;
+    }
+}
+
+.header-btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 0;
+    &:focus {
+        outline: none;
+    }
+    svg {
+        color: #fff;
+    }
+}
+
+@media (min-width: 1000px) {
+    .header-btn {
+        display: none;
     }
 }

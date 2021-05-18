@@ -10,3 +10,16 @@
     font-size: 1.5rem;
     margin-top: 0;
 }
+
+@media (max-width: 1000px) {
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .title {
+        font-size: 2.4rem;
+        margin-bottom: 14px;
+    }
+}

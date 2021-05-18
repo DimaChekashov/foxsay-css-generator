@@ -4,3 +4,10 @@
     background-color: red;
     /* transition: all 0.2s ease 0.02s; */
 }
+
+@media (max-width: 360px) {
+    .box-shadow__result {
+        width: 150px;
+        height: 150px;
+    }
+}
