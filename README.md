@@ -30,6 +30,24 @@
 
 [Skew](https://dimachekashov.github.io/foxsay-css-generator/#/skew)
 
+#### Filter
+
+[Blur](https://dimachekashov.github.io/foxsay-css-generator/#/blur)
+
+[Brightness](https://dimachekashov.github.io/foxsay-css-generator/#/brightness)
+
+[Contrast](https://dimachekashov.github.io/foxsay-css-generator/#/contrast)
+
+[Grayscale](https://dimachekashov.github.io/foxsay-css-generator/#/grayscale)
+
+[Hue-Rotate](https://dimachekashov.github.io/foxsay-css-generator/#/hue-rotate)
+
+[Invert](https://dimachekashov.github.io/foxsay-css-generator/#/invert)
+
+[Saturate](https://dimachekashov.github.io/foxsay-css-generator/#/saturate)
+
+[Sepia](https://dimachekashov.github.io/foxsay-css-generator/#/sepia)
+
 #### Text
 
 [Text](https://dimachekashov.github.io/foxsay-css-generator/#/text)
