@@ -97,6 +97,13 @@ function Navigation() {
                     to="/text-shadow"
                 >TextShadow</NavLink>
             </div>
+            <h3 className="navigation__label">Miscellaneous</h3>
+            <div className="navigation__group">
+                <NavLink
+                    className="navigation-btn"
+                    to="/cursor"
+                >Cursor</NavLink>
+            </div>
         </div>
     );
 }

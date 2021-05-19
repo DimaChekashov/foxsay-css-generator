@@ -207,6 +207,18 @@ function NavSidebar(props) {
                     </NavLink>
                 </li>
             </ul>
+            <h4 className="nav-sidebar__subtitle">Miscellaneous</h4>
+            <ul className="nav-sidebar__list">
+                <li>
+                    <NavLink
+                        className="nav-sidebar__link"
+                        activeClassName="active-link"
+                        to="/cursor"
+                    >
+                        Cursor
+                    </NavLink>
+                </li>
+            </ul>
         </div>
     </div>
   );
