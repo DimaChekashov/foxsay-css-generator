@@ -27,6 +27,7 @@ import Invert from "../pages/Invert/Invert";
 import Saturate from "../pages/Saturate/Saturate";
 import Sepia from "../pages/Sepia/Sepia";
 import Cursor from "../pages/Cursor/Cursor";
+import Transition from "../pages/Transition/Transition";
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -46,6 +47,9 @@ function App() {
                     <div className="container">
                         <div className="wrapper">
                             <Switch>
+                                <Route path="/transition">
+                                    <Transition />
+                                </Route>
                                 <Route path="/cursor">
                                     <Cursor />
                                 </Route>

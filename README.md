@@ -53,3 +53,11 @@
 [Text](https://dimachekashov.github.io/foxsay-css-generator/#/text)
 
 [TextShadow](https://dimachekashov.github.io/foxsay-css-generator/#/text-shadow)
+
+#### Miscellaneous
+
+[Cursor](https://dimachekashov.github.io/foxsay-css-generator/#/cursor)
+
+#### Transition
+
+[Transition](https://dimachekashov.github.io/foxsay-css-generator/#/transition)

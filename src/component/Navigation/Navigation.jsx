@@ -104,6 +104,13 @@ function Navigation() {
                     to="/cursor"
                 >Cursor</NavLink>
             </div>
+            <h3 className="navigation__label">Transition</h3>
+            <div className="navigation__group">
+                <NavLink
+                    className="navigation-btn"
+                    to="/transition"
+                >Transition</NavLink>
+            </div>
         </div>
     );
 }
