@@ -28,6 +28,7 @@ import Saturate from "../pages/Saturate/Saturate";
 import Sepia from "../pages/Sepia/Sepia";
 import Cursor from "../pages/Cursor/Cursor";
 import Transition from "../pages/Transition/Transition";
+import KeyframeAnimation from "../pages/KeyframeAnimation/KeyframeAnimation";
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -47,6 +48,9 @@ function App() {
                     <div className="container">
                         <div className="wrapper">
                             <Switch>
+                                <Route path="/keyframe-animation">
+                                    <KeyframeAnimation />
+                                </Route>
                                 <Route path="/transition">
                                     <Transition />
                                 </Route>

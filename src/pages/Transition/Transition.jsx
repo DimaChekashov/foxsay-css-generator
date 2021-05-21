@@ -296,7 +296,7 @@ function Transition() {
 
     return (
         <div>
-            <div className="generator text">
+            <div className="generator transition">
                 <div className="generator__inputs">
                     <div className="input-group">
                         <h4>Type</h4>

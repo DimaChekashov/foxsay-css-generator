@@ -6,6 +6,13 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
     return (
         <div className="navigation">
+        <h3 className="navigation__label">Animation</h3>
+        <div className="navigation__group">
+            <NavLink
+                className="navigation-btn"
+                to="/keyframe-animation"
+            >Keyframe Animation</NavLink>
+        </div>
             <h3 className="navigation__label">Border</h3>
             <div className="navigation__group">
                 <NavLink
