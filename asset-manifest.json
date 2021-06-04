@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/foxsay-css-generator/static/css/main.7b4a5d84.chunk.css",
-    "main.js": "/foxsay-css-generator/static/js/main.99ee93aa.chunk.js",
-    "main.js.map": "/foxsay-css-generator/static/js/main.99ee93aa.chunk.js.map",
+    "main.css": "/foxsay-css-generator/static/css/main.30747c88.chunk.css",
+    "main.js": "/foxsay-css-generator/static/js/main.744e5168.chunk.js",
+    "main.js.map": "/foxsay-css-generator/static/js/main.744e5168.chunk.js.map",
     "runtime-main.js": "/foxsay-css-generator/static/js/runtime-main.9fc56442.js",
     "runtime-main.js.map": "/foxsay-css-generator/static/js/runtime-main.9fc56442.js.map",
     "static/css/2.d59c41ec.chunk.css": "/foxsay-css-generator/static/css/2.d59c41ec.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.d145e682.chunk.js.map": "/foxsay-css-generator/static/js/2.d145e682.chunk.js.map",
     "index.html": "/foxsay-css-generator/index.html",
     "static/css/2.d59c41ec.chunk.css.map": "/foxsay-css-generator/static/css/2.d59c41ec.chunk.css.map",
-    "static/css/main.7b4a5d84.chunk.css.map": "/foxsay-css-generator/static/css/main.7b4a5d84.chunk.css.map",
+    "static/css/main.30747c88.chunk.css.map": "/foxsay-css-generator/static/css/main.30747c88.chunk.css.map",
     "static/js/2.d145e682.chunk.js.LICENSE.txt": "/foxsay-css-generator/static/js/2.d145e682.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9fc56442.js",
     "static/css/2.d59c41ec.chunk.css",
     "static/js/2.d145e682.chunk.js",
-    "static/css/main.7b4a5d84.chunk.css",
-    "static/js/main.99ee93aa.chunk.js"
+    "static/css/main.30747c88.chunk.css",
+    "static/js/main.744e5168.chunk.js"
   ]
 }
